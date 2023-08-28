@@ -1,0 +1,32 @@
+﻿@model List<WEB_SITE.Models.Domain.Book>
+@{
+}
+<h1>Danh sách</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Nxb</th>
+            <th>Specialized</th>
+            <th>Image</th>
+            <th>DayCreate</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Id</td>
+                <td>@book.Name</td>
+                <td>@book.Nxb</td>
+                <td>@book.Specialized</td>
+                <td>@book.Image</td>
+                <td>@book.DayCreate.ToString("dd-MM-yyyy")</td>
+                <td>@book.DayUpdate.ToString("dd-MM-yyyy")</td>
+                <td><a href="View/@book.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

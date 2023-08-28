@@ -1,0 +1,29 @@
+﻿@model  WEB_SITE.Models.AddBookViewModel
+@{
+}
+<h1>Thêm sách mới</h1>
+<form method="post" action="Add" class="mt-5">
+    <div class="form-group">
+        <label for="" class="form-label">Tên Tài Liệu</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+
+    <div class="form-group">
+        <label for="" class="form-label">Tác Giả</label>
+        <input type="text" class="form-control" asp-for="Nxb">
+    </div>
+    <div class="form-group">
+        <label for="" class="form-label">Nhà Xuất Bản</label>
+        <input type="text" class="form-control" asp-for="Specialized">
+    </div>
+    <div class="form-group">
+        <label for="" class="form-label">Năm Xuất Bản</label>
+        <input type="date" class="form-control" asp-for="DayCreate">
+    </div>
+    <div class="form-group">
+        <label for="" class="form-label">Tóm Tắt</label>
+        <input type="text" class="form-control" asp-for="Image">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
