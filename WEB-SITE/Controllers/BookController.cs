@@ -48,7 +48,7 @@ namespace WEB_SITE.Controllers
 
 
 		[HttpGet]
-		public async Task<IActionResult> View(int? Id)
+		public async Task<IActionResult> View(int Id)
 		{
 			var book = await mvcApplicationDbContext.Book.FirstOrDefaultAsync(S => S.Id == Id);
 			if (book != null)

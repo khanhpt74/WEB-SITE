@@ -5,21 +5,26 @@ namespace WEB_SITE.Models.Domain
 {
     public class Users
     {
-        [MaxLength(100)]
+        
         [Key]
         public int Id { get; set; }
-        [MaxLength(100)]
-        public string FirtsName { set; get; }
-        [MaxLength(100)]
-        public string LastName { set; get; }
+        
+        public string? FirtsName { set; get; }
+        
+        [Required]
+        public string? LastName { set; get; }
 
-        [MaxLength(255)]
-        public string Email { set; get; }
+        
+        [Required]
+        public string? Email { set; get; }
 
-        [MaxLength(255)]
-        public string Password { set; get; }
+        
+        [DataType(DataType.Password)]
+        [Required]
+        public string? Password { set; get; }
 
         [DataType(DataType.Date)]
+        [Required]
         public DateTime? DateCreate { set; get; }
     }
 }
